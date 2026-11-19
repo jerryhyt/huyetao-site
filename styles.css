@@ -106,6 +106,12 @@ body.lang-en .i18n.zh { display: none !important; }
 .btn-ghost { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
 .btn-ghost:hover { transform: translateY(-2px); border-color: var(--accent); color: var(--accent); }
 
+/* 双简历下载按钮组 */
+.cv-group { display: inline-flex; flex-wrap: wrap; gap: 10px; }
+.cv-btn { padding-inline: 18px; }
+.cv-tag { font-size: 10px; font-weight: 800; letter-spacing: .6px; color: var(--accent); background: var(--accent-soft); border-radius: 5px; padding: 2px 6px; line-height: 1.5; }
+.contact-actions .cv-group { justify-content: center; }
+
 /* 肖像 */
 .hero-portrait { display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .portrait-frame {
