@@ -292,8 +292,8 @@ body.lang-en .i18n.zh { display: none !important; }
 .timeline::before { content: ""; position: absolute; left: 150px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
 .timeline-item { position: relative; display: grid; grid-template-columns: 150px 1fr; gap: 40px; padding-bottom: 34px; }
 .timeline-item:last-child { padding-bottom: 0; }
-.timeline-meta { position: relative; text-align: right; padding-top: 2px; }
-.timeline-date { font-size: 13px; font-weight: 700; color: var(--accent); }
+.timeline-meta { position: relative; text-align: right; padding-top: 2px; padding-right: 18px; }
+.timeline-date { font-size: 13px; font-weight: 700; color: var(--accent); white-space: nowrap; }
 .timeline-meta::after { content: ""; position: absolute; right: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
 .timeline-current .timeline-meta::after { background: var(--gold); border-color: var(--gold); }
 .timeline-current .timeline-date { color: var(--gold); }
