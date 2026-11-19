@@ -298,7 +298,7 @@ body.lang-en .i18n.zh { display: none !important; }
 .timeline-current .timeline-body { border-color: var(--gold); }
 .timeline-body h3 { font-family: var(--font-serif); font-size: 19px; margin: 0 0 4px; }
 .timeline-org { color: var(--accent); font-size: 13px; font-weight: 600; margin: 0 0 12px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.org-logo { height: 20px; width: auto; max-width: 76px; object-fit: contain; flex: none; }
+.org-logo { width: 42px; height: 42px; object-fit: contain; flex: none; }
 .timeline-body p:last-child { color: var(--ink-soft); font-size: 14px; margin: 0; line-height: 1.7; }
 .timeline-points { list-style: none; padding: 0; margin: 0; display: grid; gap: 13px; }
 .timeline-points li { position: relative; padding-left: 20px; font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
@@ -325,8 +325,8 @@ body.lang-en .i18n.zh { display: none !important; }
 /* ===== 教育与资质 ===== */
 .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 44px; }
 .edu-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
-.edu-logo { height: 30px; display: flex; align-items: center; margin-bottom: 14px; }
-.edu-logo img { max-height: 30px; max-width: 92px; width: auto; object-fit: contain; }
+.edu-logo { height: 42px; display: flex; align-items: center; margin-bottom: 14px; }
+.edu-logo img { width: 42px; height: 42px; object-fit: contain; }
 .edu-year { display: inline-block; font-size: 12px; font-weight: 700; color: var(--gold); letter-spacing: .5px; margin-bottom: 12px; }
 .edu-card h3 { font-family: var(--font-serif); font-size: 19px; margin: 0 0 8px; }
 .edu-org { color: var(--accent); font-size: 13px; font-weight: 600; margin: 0 0 8px; }
