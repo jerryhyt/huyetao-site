@@ -109,6 +109,67 @@
           </div>
         </div>
       </div>
+
+    <!-- ===== 首页底部：个人影像轮播 ===== -->
+    <section class="gallery-section" aria-label="影像记录 / Gallery">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow i18n zh">影像记录</p>
+          <p class="eyebrow i18n en">Gallery</p>
+          <h2><span class="i18n zh">一些工作与成长的瞬间。</span><span class="i18n en">Moments from work and growth.</span></h2>
+          <p class="section-sub">
+            <span class="i18n zh">用方向键或点击箭头，左右切换照片。</span>
+            <span class="i18n en">Use the arrows or swipe to browse the photos.</span>
+          </p>
+        </div>
+        <div class="gallery-carousel" id="galleryCarousel">
+          <button class="gallery-arrow gallery-prev" type="button" aria-label="上一张 / Previous">&#8249;</button>
+          <div class="gallery-viewport">
+            <div class="gallery-track">
+          <figure class="gallery-slide active">
+            <img src="assets/portrait.jpg" alt="胡叶涛 Jerry Hu 个人照" loading="lazy" />
+            <figcaption><span class="i18n zh">胡叶涛 Jerry Hu · 课程教学总监 / IB 考官与培训官</span><span class="i18n en">Jerry Hu · Director of Curriculum &amp; Instruction / IB Examiner &amp; Workshop Leader</span></figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <img src="assets/teaching-whiteboard.jpg" alt="在白板前讲授数学" loading="lazy" />
+            <figcaption><span class="i18n zh">在白板前讲授数学</span><span class="i18n en">Teaching mathematics at the whiteboard</span></figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <img src="assets/ib-workshop-teaching-1.jpg" alt="IB 数学工作坊授课现场" loading="lazy" />
+            <figcaption><span class="i18n zh">IB 官方 Category 2 数学工作坊授课现场 · 2026 上海</span><span class="i18n en">Official IB Mathematics Category 2 Workshop · Shanghai 2026</span></figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <img src="assets/ib-workshop-group.jpg" alt="IB 工作坊参与者合影" loading="lazy" />
+            <figcaption><span class="i18n zh">IB 官方工作坊合影 —— 与来自各地的 IB 数学教师共同研讨课程与教学实践。</span><span class="i18n en">Group photo at the official IB workshop — exploring curriculum and teaching practice with IB mathematics teachers from across the region.</span></figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <img src="assets/ib-event-2026.jpg" alt="IB 亚太地区学校活动合影" loading="lazy" />
+            <figcaption><span class="i18n zh">IB 亚太地区学校活动 —— 持续参与国际教育共同体，与各地的教育者交流课程实践。</span><span class="i18n en">IB Asia-Pacific schools event — ongoing participation in the international education community, exchanging curriculum practice with educators across the region.</span></figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <img src="assets/campus-corridor.jpg" alt="在校园走廊查看学生作品展示" loading="lazy" />
+            <figcaption><span class="i18n zh">在校园走廊查看学生作品展示</span><span class="i18n en">Reviewing student work in the campus corridor</span></figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <img src="assets/ib-workshop-teaching-2.jpg" alt="IB 工作坊授课现场" loading="lazy" />
+            <figcaption><span class="i18n zh">工作坊授课现场 —— 作为 IBEN 培训官，把课程理解与教学实践分享给更多一线教师。</span><span class="i18n en">Leading a workshop session — as an IBEN workshop leader, sharing curriculum understanding and teaching practice with fellow educators.</span></figcaption>
+          </figure>
+            </div>
+          </div>
+          <button class="gallery-arrow gallery-next" type="button" aria-label="下一张 / Next">&#8250;</button>
+          <div class="gallery-dots" role="tablist" aria-label="选择照片">
+            <button class="gallery-dot active" type="button" data-idx="0" aria-label="1"></button>
+            <button class="gallery-dot" type="button" data-idx="1" aria-label="2"></button>
+            <button class="gallery-dot" type="button" data-idx="2" aria-label="3"></button>
+            <button class="gallery-dot" type="button" data-idx="3" aria-label="4"></button>
+            <button class="gallery-dot" type="button" data-idx="4" aria-label="5"></button>
+            <button class="gallery-dot" type="button" data-idx="5" aria-label="6"></button>
+            <button class="gallery-dot" type="button" data-idx="6" aria-label="7"></button>
+          </div>
+          <div class="gallery-counter"><span class="gallery-current">1</span> / 7</div>
+        </div>
+      </div>
+    </section>
     </section>
 
     <!-- ===== 面板 2：关于 ===== -->
@@ -143,9 +204,6 @@
         </div>
         </div>
 
-        <figure class="inline-figure">
-          <img src="assets/teaching-whiteboard.jpg" alt="在白板前讲授数学" loading="lazy" />
-        </figure>
       </div>
     </section>
 
@@ -209,7 +267,7 @@
           </article>
         </div>
 
-        <div class="ib-feature">
+        <div class="ib-feature ib-feature-text">
           <div class="ib-feature-copy">
             <p class="eyebrow i18n zh">2026 · 上海</p>
             <p class="eyebrow i18n en">2026 · Shanghai</p>
@@ -218,9 +276,6 @@
               <span class="i18n zh">作为 IB 工作坊培训官主持这场面向数学教师的官方面授培训，围绕 IB 数学课程与教学实践展开研讨。</span>
               <span class="i18n en">As an IB workshop leader, I led this official face-to-face training for mathematics teachers, focusing on the IB mathematics curriculum and teaching practice.</span>
             </p>
-          </div>
-          <div class="ib-feature-media">
-            <img src="assets/ib-workshop-teaching-1.jpg" alt="IB 数学工作坊授课现场" loading="lazy" />
           </div>
         </div>
 
@@ -234,19 +289,11 @@
           <a href="https://www.mathsbank.com.au" target="_blank" rel="noopener" class="text-link">mathsbank.com.au ↗</a>
         </div>
 
-        <figure class="inline-figure">
-          <img src="assets/ib-workshop-group.jpg" alt="IB 工作坊参与者合影" loading="lazy" />
-          <figcaption>
-            <span class="i18n zh">IB 官方工作坊合影 —— 与来自各地的 IB 数学教师共同研讨课程与教学实践。</span>
-            <span class="i18n en">Group photo at the official IB workshop — exploring curriculum and teaching practice with IB mathematics teachers from across the region.</span>
-          </figcaption>
-        </figure>
       </div>
     </section>
 
     <!-- ===== 面板 4：职业履历与领导经验（时间从近到远） ===== -->
     <section class="section section-tint tab-panel career-section" id="panel-career" role="tabpanel">
-      <div class="career-backdrop" aria-hidden="true"><img src="assets/ib-event-2026.jpg" alt="" loading="lazy" /></div>
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow i18n zh">03 — 职业履历与领导经验</p>
@@ -404,9 +451,6 @@
           </article>
         </div>
 
-        <figure class="inline-figure">
-          <img src="assets/campus-corridor.jpg" alt="在校园走廊查看学生作品展示" loading="lazy" />
-        </figure>
       </div>
     </section>
 
@@ -455,13 +499,6 @@
           </div>
         </div>
 
-        <figure class="inline-figure">
-          <img src="assets/ib-workshop-teaching-2.jpg" alt="IB 工作坊授课现场" loading="lazy" />
-          <figcaption>
-            <span class="i18n zh">工作坊授课现场 —— 作为 IBEN 培训官，把课程理解与教学实践分享给更多一线教师。</span>
-            <span class="i18n en">Leading a workshop session — as an IBEN workshop leader, sharing curriculum understanding and teaching practice with fellow educators.</span>
-          </figcaption>
-        </figure>
       </div>
     </section>
 
@@ -470,7 +507,7 @@
       <div class="container contact-inner">
         <p class="eyebrow i18n zh">05 — 联系我</p>
         <p class="eyebrow i18n en">05 — Contact</p>
-        <h2><span class="i18n zh">聊聊课程，聊聊教育。</span><span class="i18n en">Let's talk about curriculum. Let's talk about education.</span></h2>
+        <h2><span class="i18n zh">聊聊课程，聊聊教育。</span><span class="i18n en">Let's talk about education and curriculum.</span></h2>
         <p class="contact-lead">
           <span class="i18n zh">无论你是想探讨 IB 课程实施与认证、数学教学，还是希望交流教育资源，都欢迎联系我。</span>
           <span class="i18n en">Whether you would like to discuss IB implementation and authorisation, mathematics teaching, or exchange educational resources, I would be glad to hear from you.</span>

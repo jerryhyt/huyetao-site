@@ -73,7 +73,7 @@ window.addEventListener('scroll', () => {
 
 // ===== 入场动画 =====
 const revealTargets = document.querySelectorAll(
-  '.section-heading, .about-body, .hero-copy, .hero-portrait, .stats-bar, .contact-inner, .profile-photo, .role-card, .ib-card, .ib-feature, .ib-note, .timeline-item, .edu-card, .cred-item, .gallery-item'
+  '.section-heading, .about-body, .hero-copy, .hero-portrait, .stats-bar, .contact-inner, .profile-photo, .ib-card, .ib-feature, .ib-note, .timeline-item, .edu-card, .cred-item'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
@@ -93,6 +93,47 @@ if ('IntersectionObserver' in window) {
 
 // 首屏面板立即可见
 document.querySelectorAll('#panel-overview .reveal').forEach((el) => el.classList.add('visible'));
+
+// ===== 首页底部：照片左右轮播 =====
+(function initGallery() {
+  const root = document.getElementById('galleryCarousel');
+  if (!root) return;
+  const track = root.querySelector('.gallery-track');
+  const slides = Array.from(root.querySelectorAll('.gallery-slide'));
+  const dots = Array.from(root.querySelectorAll('.gallery-dot'));
+  const counter = root.querySelector('.gallery-current');
+  const total = slides.length;
+  let idx = 0;
+
+  function show(n) {
+    idx = (n + total) % total;
+    track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    if (counter) counter.textContent = String(idx + 1);
+  }
+
+  root.querySelector('.gallery-prev').addEventListener('click', () => show(idx - 1));
+  root.querySelector('.gallery-next').addEventListener('click', () => show(idx + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => show(i)));
+
+  // 键盘左右键（仅当概览面板可见时响应）
+  document.addEventListener('keydown', (e) => {
+    if (!document.getElementById('panel-overview').classList.contains('active')) return;
+    if (e.key === 'ArrowLeft') { show(idx - 1); }
+    else if (e.key === 'ArrowRight') { show(idx + 1); }
+  });
+
+  // 触摸滑动
+  let startX = null;
+  const viewport = root.querySelector('.gallery-viewport');
+  viewport.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  viewport.addEventListener('touchend', (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) show(idx + (dx < 0 ? 1 : -1));
+    startX = null;
+  }, { passive: true });
+})();
 
 // 年份
 document.getElementById('year').textContent = new Date().getFullYear();
