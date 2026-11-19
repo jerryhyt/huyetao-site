@@ -240,6 +240,9 @@ body.lang-en .i18n.zh { display: none !important; }
   .timeline-meta { text-align: left; }
   .timeline-meta::after { left: -27px; right: auto; top: 4px; }
   .timeline-body { padding: 20px; }
+  .timeline-body-detailed { padding: 20px; }
+  .tl-head { flex-wrap: wrap; }
+  .gifted-grid { grid-template-columns: 1fr; }
   .gallery-item img { height: 220px; }
 }
 
@@ -304,6 +307,27 @@ body.lang-en .i18n.zh { display: none !important; }
 .timeline-points li { position: relative; padding-left: 20px; font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
 .timeline-points li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
 .timeline-points strong { color: var(--accent-deep); font-weight: 700; }
+
+/* 职业履历：模糊背景（原 IB 活动合影，不单独占页面） */
+.career-section { position: relative; overflow: hidden; }
+.career-backdrop { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.career-backdrop img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 40%;
+  filter: blur(26px) saturate(0.75); opacity: 0.13; transform: scale(1.12); transform-origin: center;
+}
+.career-backdrop::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(240,243,247,0.55) 0%, rgba(240,243,247,0.78) 100%);
+}
+.career-section > .container { position: relative; z-index: 1; }
+
+/* 详细履历条目（斐特思 / 世华） */
+.timeline-body-detailed { padding: 26px 30px 28px; }
+.tl-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 2px; }
+.tl-head h3 { margin: 0 0 4px; }
+.tl-summary { color: var(--ink-soft); font-size: 14px; margin: 0 0 16px; line-height: 1.7; }
+.timeline-body-detailed .role-list { margin-bottom: 16px; gap: 10px; }
+.timeline-body-detailed .role-tags { margin-bottom: 0; }
 /* 优生培养体系板块 */
 /* ===== 领导工作重点（优生培养） ===== */
 .leadership-feature { margin-top: 26px; }
