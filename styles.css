@@ -45,11 +45,8 @@ img { max-width: 100%; display: block; }
 .site-header.scrolled { border-color: var(--line); box-shadow: 0 6px 20px -18px rgba(18,62,102,.5); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 74px; }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark {
-  display: grid; place-items: center; width: 40px; height: 40px;
-  border-radius: 11px; background: var(--accent-deep); color: #fff;
-  font-weight: 700; font-size: 14px; letter-spacing: .5px;
-}
+.brand-mark { display: block; width: 42px; height: 42px; flex: none; }
+.brand-mark img { width: 100%; height: 100%; display: block; }
 .brand-text { font-weight: 700; font-size: 16px; line-height: 1.15; }
 .brand-en { display: block; font-size: 11px; color: var(--muted); font-weight: 500; letter-spacing: .5px; }
 /* 语言切换按钮 */
@@ -304,6 +301,18 @@ body.lang-en .i18n.zh { display: none !important; }
 .timeline-points li { position: relative; padding-left: 20px; font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
 .timeline-points li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
 .timeline-points strong { color: var(--accent-deep); font-weight: 700; }
+/* 优生培养体系板块 */
+.gifted-program { margin-top: 20px; padding: 22px; background: linear-gradient(150deg, #f4f8fc, #eef3f9); border: 1px solid #dbe6f2; border-radius: 14px; }
+.gifted-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 18px; }
+.gifted-badge { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; background: var(--accent-deep); color: var(--gold); font-size: 17px; }
+.gifted-head-text h4 { font-family: var(--font-serif); font-size: 16px; margin: 0 0 5px; color: var(--accent-deep); }
+.gifted-head-text p { margin: 0; font-size: 13px; line-height: 1.65; color: var(--ink-soft); }
+.gifted-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.gifted-card { background: var(--surface); border: 1px solid var(--line); border-radius: 11px; padding: 15px 16px; }
+.gifted-num { display: block; font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--gold); margin-bottom: 5px; }
+.gifted-card h5 { font-size: 14px; margin: 0 0 6px; color: var(--ink); font-weight: 700; }
+.gifted-card p { margin: 0; font-size: 12.5px; line-height: 1.6; color: var(--ink-soft); }
+.gifted-foot { margin: 15px 0 0; padding-top: 13px; border-top: 1px dashed #cdd9e7; font-size: 12.5px; font-style: italic; color: var(--accent); }
 
 /* ===== 教育与资质 ===== */
 .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 44px; }
@@ -336,6 +345,8 @@ body.lang-en .i18n.zh { display: none !important; }
 @media (max-width: 640px) {
   .inline-figure img { height: 240px; }
   .figure-pair { grid-template-columns: 1fr; }
+  .gifted-grid { grid-template-columns: 1fr; }
+  .gifted-program { padding: 17px; }
 }
 
 /* ===== 入场动画 ===== */
