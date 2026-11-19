@@ -294,6 +294,10 @@ body.lang-en .i18n.zh { display: none !important; }
 .timeline-body h3 { font-family: var(--font-serif); font-size: 19px; margin: 0 0 4px; }
 .timeline-org { color: var(--accent); font-size: 13px; font-weight: 600; margin: 0 0 12px; }
 .timeline-body p:last-child { color: var(--ink-soft); font-size: 14px; margin: 0; line-height: 1.7; }
+.timeline-points { list-style: none; padding: 0; margin: 0; display: grid; gap: 13px; }
+.timeline-points li { position: relative; padding-left: 20px; font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
+.timeline-points li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+.timeline-points strong { color: var(--accent-deep); font-weight: 700; }
 
 /* ===== 教育与资质 ===== */
 .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 44px; }
