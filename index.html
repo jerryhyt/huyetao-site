@@ -10,201 +10,279 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <!-- ===== 导航 ===== -->
+<body class="lang-zh">
+  <!-- ===== 顶部：品牌 + 语言切换 ===== -->
   <header class="site-header" id="top">
     <div class="container nav-inner">
-      <a class="brand" href="#top" aria-label="回到顶部">
+      <a class="brand" href="#top" data-tab="overview" aria-label="Home">
         <span class="brand-mark">JH</span>
         <span class="brand-text">胡叶涛<span class="brand-en">Jerry Hu</span></span>
       </a>
-      <nav class="nav-links" aria-label="主导航">
-        <a href="#about">关于</a>
-        <a href="#leadership">领导经验</a>
-        <a href="#ib">IB 成就</a>
-        <a href="#career">职业履历</a>
-        <a href="#gallery">影像</a>
-        <a href="#contact" class="nav-cta">联系我</a>
+      <div class="nav-tools">
+        <div class="lang-switch" role="group" aria-label="Language / 语言">
+          <button class="lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <span class="lang-divider">/</span>
+          <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="展开栏目" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="container tab-wrap">
+      <nav class="tab-nav" role="tablist" aria-label="主导航">
+        <button class="tab-btn active" data-tab="overview" role="tab" aria-selected="true"><span class="i18n zh">概览</span><span class="i18n en">Home</span></button>
+        <button class="tab-btn" data-tab="about" role="tab" aria-selected="false"><span class="i18n zh">关于</span><span class="i18n en">About</span></button>
+        <button class="tab-btn" data-tab="leadership" role="tab" aria-selected="false"><span class="i18n zh">领导经验</span><span class="i18n en">Leadership</span></button>
+        <button class="tab-btn" data-tab="ib" role="tab" aria-selected="false"><span class="i18n zh">IB 成就</span><span class="i18n en">IB Achievements</span></button>
+        <button class="tab-btn" data-tab="career" role="tab" aria-selected="false"><span class="i18n zh">职业履历</span><span class="i18n en">Career</span></button>
+        <button class="tab-btn" data-tab="education" role="tab" aria-selected="false"><span class="i18n zh">教育与资质</span><span class="i18n en">Education</span></button>
+        <button class="tab-btn" data-tab="gallery" role="tab" aria-selected="false"><span class="i18n zh">影像</span><span class="i18n en">Gallery</span></button>
+        <button class="tab-btn" data-tab="contact" role="tab" aria-selected="false"><span class="i18n zh">联系</span><span class="i18n en">Contact</span></button>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="展开菜单" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
   <main>
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="dot"></span> CURRICULUM LEADER · IB EDUCATOR</p>
-          <h1>以课程领导力，<br /><em>连接教育与世界。</em></h1>
-          <p class="hero-lead">
-            我是胡叶涛（Jerry Hu），国际教育管理者与数学教育者。现任斐特思学校高中部课程教学总监、世华学校 IBDP 协调员，
-            深耕 IB 课程实施与认证，兼具 IB 考官与培训官经验。
-          </p>
-          <div class="hero-actions">
-            <a href="#about" class="btn btn-primary">了解我的工作</a>
-            <a href="assets/Jerry-Hu-Resume-2026.pdf" class="btn btn-ghost" target="_blank" rel="noopener">下载简历 <span aria-hidden="true">↗</span></a>
+    <!-- ===== 面板 1：概览 ===== -->
+    <section class="tab-panel active" id="panel-overview" role="tabpanel">
+      <div class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="dot"></span> CURRICULUM LEADER · IB EDUCATOR</p>
+            <h1>
+              <span class="i18n zh">以课程领导力，<br /><em>连接教育与世界。</em></span>
+              <span class="i18n en">Leading with curriculum,<br /><em>connecting education to the world.</em></span>
+            </h1>
+            <p class="hero-lead">
+              <span class="i18n zh">我是胡叶涛（Jerry Hu），国际教育管理者与数学教育者。现任斐特思学校高中部课程教学总监、世华学校 IBDP 协调员，深耕 IB 课程实施与认证，兼具 IB 考官与培训官经验。</span>
+              <span class="i18n en">I am Jerry Hu, an international education leader and mathematics educator. I currently serve as Director of Curriculum and Instruction at Fettes College Guangzhou and IBDP Coordinator at China World Academy, with deep experience in IB programme implementation and authorisation as both an examiner and workshop leader.</span>
+            </p>
+            <div class="hero-actions">
+              <a href="#top" class="btn btn-primary" data-tab="about">
+                <span class="i18n zh">了解我的工作</span><span class="i18n en">Explore my work</span>
+              </a>
+              <a href="assets/Jerry-Hu-Resume-2026.pdf" class="btn btn-ghost" target="_blank" rel="noopener">
+                <span class="i18n zh">下载简历</span><span class="i18n en">Download CV</span> <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-portrait profile-photo">
+            <div class="portrait-frame">
+              <img src="assets/portrait.jpg" alt="胡叶涛 Jerry Hu 个人照" />
+            </div>
+            <div class="portrait-caption">
+              <strong>胡叶涛 · Jerry Hu</strong>
+              <span class="i18n zh">课程教学总监 / IBDP 协调员 · IB 考官与培训官</span>
+              <span class="i18n en">Director of Curriculum &amp; Instruction / IBDP Coordinator · IB Examiner &amp; Workshop Leader</span>
+            </div>
           </div>
         </div>
-        <div class="hero-portrait profile-photo">
-          <div class="portrait-frame">
-            <img src="assets/portrait.jpg" alt="胡叶涛 Jerry Hu 个人照" />
-          </div>
-          <div class="portrait-caption">
-            <strong>胡叶涛 · Jerry Hu</strong>
-            <span>课程教学总监 / IBDP 协调员 · IB 考官与培训官</span>
-          </div>
-        </div>
-      </div>
 
-      <div class="container">
-        <div class="stats-bar">
-          <div class="stat">
-            <span class="stat-num">10<span class="stat-plus">+</span></span>
-            <span class="stat-label">年国际教育实践<br /><small>课程教学与领导</small></span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">IB</span>
-            <span class="stat-label">三重专业身份<br /><small>考官 · 培训官 · 协调员</small></span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">2<span class="stat-plus">次</span></span>
-            <span class="stat-label">主导 IB 官方评审<br /><small>认证与五年评审</small></span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">5<span class="stat-plus">类</span></span>
-            <span class="stat-label">课程体系经验<br /><small>IGCSE·A-Level·AP·BTEC·IBDP</small></span>
+        <div class="container">
+          <div class="stats-bar">
+            <div class="stat">
+              <span class="stat-num i18n zh">10<span class="stat-plus">+</span></span>
+              <span class="stat-num i18n en">10<span class="stat-plus">+</span></span>
+              <span class="stat-label i18n zh">年国际教育实践<br /><small>课程教学与领导</small></span>
+              <span class="stat-label i18n en">Years in international education<br /><small>Curriculum, teaching &amp; leadership</small></span>
+            </div>
+            <div class="stat">
+              <span class="stat-num i18n zh">IB</span>
+              <span class="stat-num i18n en">IB</span>
+              <span class="stat-label i18n zh">三重专业身份<br /><small>考官 · 培训官 · 协调员</small></span>
+              <span class="stat-label i18n en">Three professional roles<br /><small>Examiner · Workshop Leader · Coordinator</small></span>
+            </div>
+            <div class="stat">
+              <span class="stat-num i18n zh">2<span class="stat-plus">次</span></span>
+              <span class="stat-num i18n en">2</span>
+              <span class="stat-label i18n zh">主导 IB 官方评审<br /><small>认证与五年评审</small></span>
+              <span class="stat-label i18n en">Official IB reviews led<br /><small>Authorisation &amp; five-year review</small></span>
+            </div>
+            <div class="stat">
+              <span class="stat-num i18n zh">5<span class="stat-plus">类</span></span>
+              <span class="stat-num i18n en">5</span>
+              <span class="stat-label i18n zh">课程体系经验<br /><small>IGCSE·A-Level·AP·BTEC·IBDP</small></span>
+              <span class="stat-label i18n en">Programme systems<br /><small>IGCSE·A-Level·AP·BTEC·IBDP</small></span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== 关于 ===== -->
-    <section class="section" id="about">
+    <!-- ===== 面板 2：关于 ===== -->
+    <section class="section tab-panel" id="panel-about" role="tabpanel">
       <div class="container about-grid">
         <div class="section-heading">
-          <p class="eyebrow">01 — 关于我</p>
-          <h2>教育者，<br />也是课程领导者。</h2>
+          <p class="eyebrow i18n zh">01 — 关于我</p>
+          <p class="eyebrow i18n en">01 — About me</p>
+          <h2><span class="i18n zh">教育者，<br />也是课程领导者。</span><span class="i18n en">An educator,<br />and a curriculum leader.</span></h2>
         </div>
         <div class="about-body">
           <p class="lead">
-            我相信，好的课程领导不是发号施令，
-            而是把理念翻译成课堂里真实发生的学习。
+            <span class="i18n zh">好的课程领导不是发号施令，而是把理念翻译成课堂里真实发生的学习。</span>
+            <span class="i18n en">Good curriculum leadership is not about giving orders — it is about translating ideas into learning that genuinely happens in the classroom.</span>
           </p>
           <p>
-            我的工作横跨两条主线：一条是学校层面的课程与教学管理——统筹多套国际课程的目标对齐、师资发展与质量保障；
-            另一条是 IB 课程的专业实践——从学校认证、五年评审，到全球统考阅卷与教师培训。
+            <span class="i18n zh">我的工作横跨两条主线：一条是学校层面的课程与教学管理——统筹多套国际课程的目标对齐、师资发展与质量保障；另一条是 IB 课程的专业实践——从学校认证、五年评审，到全球统考阅卷与教师培训。</span>
+            <span class="i18n en">My work spans two threads: school-level curriculum and teaching management — aligning goals across multiple international programmes, developing faculty, and assuring quality; and professional IB practice — from school authorisation and five-year reviews to global examination marking and teacher training.</span>
           </p>
           <p>
-            这种"管理者 + 一线教育者"的双重视角，让我既能设计制度，也理解制度落地时的课堂细节。
-            我毕业于新加坡国立大学与滑铁卢大学，数学教育的专业训练始终是我的底层语言。
+            <span class="i18n zh">这种"管理者 + 一线教育者"的双重视角，让我既能设计制度，也理解制度落地时的课堂细节。我毕业于新加坡国立大学与滑铁卢大学，数学教育的专业训练始终是我的底层语言。</span>
+            <span class="i18n en">This dual perspective as "leader + classroom educator" lets me both design systems and understand the classroom details when they are put into practice. A graduate of the National University of Singapore and the University of Waterloo, mathematics education remains my foundational language.</span>
           </p>
           <ul class="about-tags">
-            <li>IBDP 项目实施与认证</li>
-            <li>教学领导力</li>
-            <li>课程设计 · 跨学科整合</li>
-            <li>教师管理与培训</li>
-            <li>学校战略规划</li>
+            <li><span class="i18n zh">IBDP 项目实施与认证</span><span class="i18n en">IBDP implementation &amp; authorisation</span></li>
+            <li><span class="i18n zh">教学领导力</span><span class="i18n en">Pedagogical leadership</span></li>
+            <li><span class="i18n zh">课程设计 · 跨学科整合</span><span class="i18n en">Curriculum design · Cross-curricular integration</span></li>
+            <li><span class="i18n zh">教师管理与培训</span><span class="i18n en">Faculty management &amp; training</span></li>
+            <li><span class="i18n zh">学校战略规划</span><span class="i18n en">School strategic planning</span></li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ===== 领导经验 ===== -->
-    <section class="section section-tint" id="leadership">
+    <!-- ===== 面板 3：领导经验 ===== -->
+    <section class="section section-tint tab-panel" id="panel-leadership" role="tabpanel">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">02 — 领导经验</p>
-          <h2>在两所学校，<br />做课程的领导者。</h2>
-          <p class="section-sub">从课程体系建设到日常教学运营，把战略落到每一间教室。</p>
+          <p class="eyebrow i18n zh">02 — 领导经验</p>
+          <p class="eyebrow i18n en">02 — Leadership</p>
+          <h2><span class="i18n zh">在两所学校，<br />做课程的领导者。</span><span class="i18n en">Leading curriculum<br />in two schools.</span></h2>
+          <p class="section-sub">
+            <span class="i18n zh">从课程体系建设到日常教学运营，把战略落到每一间教室。</span>
+            <span class="i18n en">From building programmes to daily academic operations — translating strategy into every classroom.</span>
+          </p>
         </div>
         <div class="role-grid">
           <article class="role-card">
             <div class="role-head">
               <div>
-                <span class="role-date">2026.08 — 至今</span>
-                <h3>课程教学总监</h3>
+                <span class="role-date i18n zh">2026.08 — 至今</span>
+                <span class="role-date i18n en">Aug 2026 – Present</span>
+                <h3><span class="i18n zh">课程教学总监</span><span class="i18n en">Director of Curriculum and Instruction</span></h3>
                 <p class="role-org">斐特思学校 · Fettes College Guangzhou</p>
               </div>
-              <span class="role-badge">现任</span>
+              <span class="role-badge i18n zh">现任</span>
+              <span class="role-badge i18n en">Current</span>
             </div>
             <ul class="role-list">
-              <li>作为学校领导团队成员，统筹高中 IGCSE / A-Level / AP / BTEC 多课程体系，管理各学科组与考试局协调员</li>
-              <li>负责教学任务安排、日常教学与晚自习督导，组织集会、家长会等学术活动</li>
-              <li>引领教师培训与学科组长管理，通过课堂观察与评价持续提升教学质量</li>
-              <li>监测 IGCSE / A-Level / AP 考试成绩，以数据驱动的教学干预推动持续改进</li>
-              <li>负责牛津剑桥及其他知名高校升学指导项目，涵盖学科拓展、学术竞赛与导师制</li>
+              <li><span class="i18n zh">作为学校领导团队成员，统筹高中 IGCSE / A-Level / AP / BTEC 多课程体系，管理各学科组与考试局协调员</span><span class="i18n en">As a member of the Senior Leadership Team, oversee the High School's multi-programme system (IGCSE / A-Level / AP / BTEC); manage all subject departments and exam-board coordinators</span></li>
+              <li><span class="i18n zh">负责教学任务安排、日常教学与晚自习督导，组织集会、家长会等学术活动</span><span class="i18n en">Assign teaching duties, supervise daily instruction and evening self-study tutoring, and organise academic events such as assemblies and parent meetings</span></li>
+              <li><span class="i18n zh">引领教师培训与学科组长管理，通过课堂观察与评价持续提升教学质量</span><span class="i18n en">Lead teacher training and manage subject heads; raise teaching quality through classroom observation and evaluation</span></li>
+              <li><span class="i18n zh">监测 IGCSE / A-Level / AP 考试成绩，以数据驱动的教学干预推动持续改进</span><span class="i18n en">Monitor IGCSE / A-Level / AP examination results; implement data-driven interventions for continuous improvement</span></li>
+              <li><span class="i18n zh">负责牛津剑桥及其他知名高校升学指导项目，涵盖学科拓展、学术竞赛与导师制</span><span class="i18n en">Run the high-achiever programme focused on Oxbridge and other top universities, covering subject extension, academic competitions, and a tutorial mentoring system</span></li>
             </ul>
             <div class="role-tags">
-              <span>多课程体系统筹</span><span>教学质量保障</span><span>师资发展</span><span>升学指导</span>
+              <span class="i18n zh">多课程体系统筹</span><span class="i18n en">Multi-programme oversight</span>
+              <span class="i18n zh">教学质量保障</span><span class="i18n en">Teaching quality assurance</span>
+              <span class="i18n zh">师资发展</span><span class="i18n en">Faculty development</span>
+              <span class="i18n zh">升学指导</span><span class="i18n en">University admissions guidance</span>
             </div>
           </article>
 
           <article class="role-card">
             <div class="role-head">
               <div>
-                <span class="role-date">2020.07 — 至今</span>
-                <h3>IBDP 协调员 · 学术助理院长</h3>
+                <span class="role-date i18n zh">2020.07 — 至今</span>
+                <span class="role-date i18n en">Jul 2020 – Present</span>
+                <h3><span class="i18n zh">IBDP 协调员 · 学术助理院长</span><span class="i18n en">IBDP Coordinator · Assistant Dean of Academics</span></h3>
                 <p class="role-org">世华学校 · China World Academy</p>
               </div>
-              <span class="role-badge">长期</span>
+              <span class="role-badge i18n zh">长期</span>
+              <span class="role-badge i18n en">Ongoing</span>
             </div>
             <ul class="role-list">
-              <li>全面负责高中学术工作，与各部门负责人共同设计实施 IBDP 与 G10 预备课程，对齐 IB 标准与学校理念</li>
-              <li>主导 2020 年 IB 学校认证，以及 2025 年 IB 五年评审与重新认证</li>
-              <li>作为学术领导团队成员，负责教师评估、资源配置、培训、政策制定与考试筹备，服务 30 余位各科教师</li>
-              <li>教授 IBDP 数学（AA / AI HL & SL），指导拓展论文（EE）与 CAS 活动</li>
-              <li>为升学冲刺知名高校的学生提供 STEP / MAT / TMUA 等补充指导，辅导学生获得剑桥与帝国理工录取</li>
+              <li><span class="i18n zh">全面负责高中学术工作，与各部门负责人共同设计实施 IBDP 与 G10 预备课程，对齐 IB 标准与学校理念</span><span class="i18n en">In overall charge of High School academics; work with Heads of Departments to design and implement the IBDP and G10 Foundation Programme, aligned with IB standards and CWA core values</span></li>
+              <li><span class="i18n zh">主导 2020 年 IB 学校认证，以及 2025 年 IB 五年评审与重新认证</span><span class="i18n en">Led the 2020 IB authorisation and the 2025 IB five-year review and re-authorisation</span></li>
+              <li><span class="i18n zh">作为学术领导团队成员，负责教师评估、资源配置、培训、政策制定与考试筹备，服务 30 余位各科教师</span><span class="i18n en">As part of the academic leadership team, carried out staff appraisal, resource allocation, training, policy making and exam preparation, serving 30+ teachers</span></li>
+              <li><span class="i18n zh">教授 IBDP 数学（AA / AI HL &amp; SL），指导拓展论文（EE）与 CAS 活动</span><span class="i18n en">Teach IBDP Mathematics (AA / AI HL &amp; SL); supervise Extended Essays and CAS activities</span></li>
+              <li><span class="i18n zh">为升学冲刺知名高校的学生提供 STEP / MAT / TMUA 等补充指导，辅导学生获得剑桥与帝国理工录取</span><span class="i18n en">Provide STEP / MAT / TMUA preparation for students applying to top UK universities; guided students to offers from Cambridge and Imperial College London</span></li>
             </ul>
             <div class="role-tags">
-              <span>IB 学校认证</span><span>五年评审</span><span>IBDP 教学</span><span>升学辅导</span>
+              <span class="i18n zh">IB 学校认证</span><span class="i18n en">IB authorisation</span>
+              <span class="i18n zh">五年评审</span><span class="i18n en">Five-year review</span>
+              <span class="i18n zh">IBDP 教学</span><span class="i18n en">IBDP teaching</span>
+              <span class="i18n zh">升学辅导</span><span class="i18n en">University guidance</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== IB 专业成就 ===== -->
-    <section class="section" id="ib">
+    <!-- ===== 面板 4：IB 成就 ===== -->
+    <section class="section tab-panel" id="panel-ib" role="tabpanel">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">03 — IB 专业成就</p>
-          <h2>从认证到评审，<br />从阅卷到培训。</h2>
-          <p class="section-sub">在 IB 生态的不同角色中积累经验，再把经验带回学校。</p>
+          <p class="eyebrow i18n zh">03 — IB 专业成就</p>
+          <p class="eyebrow i18n en">03 — IB achievements</p>
+          <h2><span class="i18n zh">从认证到评审，<br />从阅卷到培训。</span><span class="i18n en">From authorisation to review,<br />from marking to training.</span></h2>
+          <p class="section-sub">
+            <span class="i18n zh">在 IB 生态的不同角色中积累经验，再把经验带回学校。</span>
+            <span class="i18n en">Experience gained across different roles in the IB community, brought back to the school.</span>
+          </p>
         </div>
         <div class="ib-grid">
           <article class="ib-card ib-card-highlight">
             <div class="ib-icon" aria-hidden="true">IB</div>
-            <span class="ib-kicker">学校认证与评审</span>
-            <h3>两度主导 IB 官方评审</h3>
-            <p>带领世华学校完成 2020 年 IB 授权认证，并于 2025 年完成 IB 五年评审与重新认证，深度积累学校项目与课程对标 IB 标准与实务的经验。</p>
-            <div class="ib-foot"><span>2020</span><span>授权认证</span><span>·</span><span>2025</span><span>五年评审</span></div>
+            <span class="ib-kicker i18n zh">学校认证与评审</span>
+            <span class="ib-kicker i18n en">Authorisation &amp; Review</span>
+            <h3><span class="i18n zh">两度主导 IB 官方评审</span><span class="i18n en">Led two official IB reviews</span></h3>
+            <p>
+              <span class="i18n zh">带领世华学校完成 2020 年 IB 授权认证，并于 2025 年完成 IB 五年评审与重新认证，深度积累学校项目与课程对标 IB 标准与实务的经验。</span>
+              <span class="i18n en">Led China World Academy through IB authorisation in 2020 and the five-year review and re-authorisation in 2025, gaining deep experience in aligning a school's programme and curriculum with IB standards and practices.</span>
+            </p>
+            <div class="ib-foot">
+              <span class="i18n zh">2020 授权认证</span><span class="i18n en">2020 Authorisation</span>
+              <span>·</span>
+              <span class="i18n zh">2025 五年评审</span><span class="i18n en">2025 Five-year review</span>
+            </div>
           </article>
           <article class="ib-card">
             <div class="ib-icon" aria-hidden="true">✓</div>
-            <span class="ib-kicker">全球统考阅卷</span>
-            <h3>IB 与 A-Level 考官</h3>
-            <p>自 2017 年起担任 IBDP 数学考官（HL / SL），2020 年起参与全球统考阅卷：2020–2022 年担任数学 IA moderator，2023 年起参与 Math AA HL 阅卷。同时担任剑桥 CIE A-Level 数学全球考官。</p>
-            <div class="ib-foot"><span>IBDP 数学考官</span><span>·</span><span>CIE 全球考官</span></div>
+            <span class="ib-kicker i18n zh">全球统考阅卷</span>
+            <span class="ib-kicker i18n en">Global Examination Marking</span>
+            <h3><span class="i18n zh">IB 与 A-Level 考官</span><span class="i18n en">IB &amp; A-Level Examiner</span></h3>
+            <p>
+              <span class="i18n zh">自 2017 年起担任 IBDP 数学考官（HL / SL），2020 年起参与全球统考阅卷：2020–2022 年担任数学 IA moderator，2023 年起参与 Math AA HL 阅卷。同时担任剑桥 CIE A-Level 数学全球考官。</span>
+              <span class="i18n en">IBDP Mathematics examiner (HL / SL) since 2017; marking IB global examinations since 2020 — Mathematics IA moderator (2020–2022) and Math AA HL marker since 2023. Also a Cambridge CIE A-Level Mathematics global examiner.</span>
+            </p>
+            <div class="ib-foot">
+              <span class="i18n zh">IBDP 数学考官</span><span class="i18n en">IBDP Math Examiner</span>
+              <span>·</span>
+              <span class="i18n zh">CIE 全球考官</span><span class="i18n en">CIE Global Examiner</span>
+            </div>
           </article>
           <article class="ib-card">
             <div class="ib-icon" aria-hidden="true">◎</div>
-            <span class="ib-kicker">IB 官方培训</span>
-            <h3>IBDP 工作坊培训官</h3>
-            <p>IB 教育者网络（IBEN）认证工作坊培训官。2026 年 6 月在上海主持 IB 官方数学 Category 2 面授工作坊，面向 IB 数学教师开展专业培训。</p>
-            <div class="ib-foot"><span>IBEN Workshop Leader</span><span>·</span><span>2026 上海</span></div>
+            <span class="ib-kicker i18n zh">IB 官方培训</span>
+            <span class="ib-kicker i18n en">IB Official Training</span>
+            <h3><span class="i18n zh">IBDP 工作坊培训官</span><span class="i18n en">IBDP Workshop Leader</span></h3>
+            <p>
+              <span class="i18n zh">IB 教育者网络（IBEN）认证工作坊培训官。2026 年 6 月在上海主持 IB 官方数学 Category 2 面授工作坊，面向 IB 数学教师开展专业培训。</span>
+              <span class="i18n en">Certified workshop leader with the IB Educator Network (IBEN). Led the official IB face-to-face Mathematics Category 2 workshop in Shanghai in June 2026, training IB mathematics teachers.</span>
+            </p>
+            <div class="ib-foot">
+              <span>IBEN Workshop Leader</span>
+              <span>·</span>
+              <span class="i18n zh">2026 上海</span><span class="i18n en">Shanghai 2026</span>
+            </div>
           </article>
         </div>
 
         <div class="ib-feature">
           <div class="ib-feature-copy">
-            <p class="eyebrow">2026 · 上海</p>
-            <h3>IB 官方 Category 2 数学工作坊</h3>
-            <p>作为 IB 工作坊培训官主持这场面向数学教师的官方面授培训，围绕 IB 数学课程与教学实践展开研讨。相关影像记录见下方「影像」板块。</p>
-            <a href="#gallery" class="text-link">查看现场照片 →</a>
+            <p class="eyebrow i18n zh">2026 · 上海</p>
+            <p class="eyebrow i18n en">2026 · Shanghai</p>
+            <h3><span class="i18n zh">IB 官方 Category 2 数学工作坊</span><span class="i18n en">Official IB Mathematics Category 2 Workshop</span></h3>
+            <p>
+              <span class="i18n zh">作为 IB 工作坊培训官主持这场面向数学教师的官方面授培训，围绕 IB 数学课程与教学实践展开研讨。相关影像记录见「影像」栏目。</span>
+              <span class="i18n en">As an IB workshop leader, I led this official face-to-face training for mathematics teachers, focusing on the IB mathematics curriculum and teaching practice. See the Gallery tab for photos.</span>
+            </p>
+            <a href="#top" class="text-link" data-tab="gallery">
+              <span class="i18n zh">查看现场照片 →</span><span class="i18n en">View photos →</span>
+            </a>
           </div>
           <div class="ib-feature-media">
             <img src="assets/ib-workshop-teaching-1.jpg" alt="IB 数学工作坊授课现场" loading="lazy" />
@@ -212,152 +290,183 @@
         </div>
 
         <div class="ib-note">
-          <span class="ib-note-label">持续贡献</span>
-          <p>自 2022 年起，兼职为 IB Math Bank 编写 IBDP 风格的数学试题与评分标准，持续参与国际课程资源建设。</p>
+          <span class="ib-note-label i18n zh">持续贡献</span>
+          <span class="ib-note-label i18n en">Ongoing Contribution</span>
+          <p>
+            <span class="i18n zh">自 2022 年起，兼职为 IB Math Bank 编写 IBDP 风格的数学试题与评分标准，持续参与国际课程资源建设。</span>
+            <span class="i18n en">Since 2022, authoring IBDP-style mathematics questions and mark schemes for IB Math Bank on a part-time basis, contributing to international curriculum resources.</span>
+          </p>
           <a href="https://www.mathsbank.com.au" target="_blank" rel="noopener" class="text-link">mathsbank.com.au ↗</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== 职业履历（时间从早到晚） ===== -->
-    <section class="section section-tint" id="career">
+    <!-- ===== 面板 5：职业履历（时间从早到晚） ===== -->
+    <section class="section section-tint tab-panel" id="panel-career" role="tabpanel">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">04 — 职业履历</p>
-          <h2>从课堂到管理层，<br />一步步走过来。</h2>
-          <p class="section-sub">按时间顺序，从最早的岗位到当前的职责。</p>
+          <p class="eyebrow i18n zh">04 — 职业履历</p>
+          <p class="eyebrow i18n en">04 — Career</p>
+          <h2><span class="i18n zh">从课堂到管理层，<br />一步步走过来。</span><span class="i18n en">From the classroom to leadership,<br />step by step.</span></h2>
+          <p class="section-sub">
+            <span class="i18n zh">按时间顺序，从最早的岗位到当前的职责。</span>
+            <span class="i18n en">In chronological order, from the earliest role to the current position.</span>
+          </p>
         </div>
         <div class="timeline">
           <article class="timeline-item">
-            <div class="timeline-meta"><span class="timeline-date">2015.09 — 2018.06</span></div>
+            <div class="timeline-meta"><span class="timeline-date i18n zh">2015.09 — 2018.06</span><span class="timeline-date i18n en">Sep 2015 – Jun 2018</span></div>
             <div class="timeline-body">
-              <h3>A-Level &amp; IB 数学 / 物理教师 · 主考官</h3>
-              <p class="timeline-org">广东顺德德胜学校 国际教育部</p>
-              <p>从零搭建 A-Level 与 IGCSE 数学课程，面向 G10–G12 教授 IBDP 与 A-Level 数学；担任考试委员会主考官，统筹 IBDP 考试准备。</p>
+              <h3><span class="i18n zh">A-Level &amp; IB 数学 / 物理教师 · 主考官</span><span class="i18n en">A-Level &amp; IB Math / Physics Teacher · Chief Presiding Examiner</span></h3>
+              <p class="timeline-org">广东顺德德胜学校 国际教育部 / Guangdong Shunde Desheng School, IED</p>
+              <p>
+                <span class="i18n zh">从零搭建 A-Level 与 IGCSE 数学课程，面向 G10–G12 教授 IBDP 与 A-Level 数学；担任考试委员会主考官，统筹 IBDP 考试准备。</span>
+                <span class="i18n en">Created the A-Level and IGCSE Mathematics curriculum from scratch; taught IBDP and A-Level Mathematics to G10–G12 students; served as Chief Examiner in the examination committee, coordinating IBDP exam preparation.</span>
+              </p>
             </div>
           </article>
           <article class="timeline-item">
-            <div class="timeline-meta"><span class="timeline-date">2018.08 — 2020.07</span></div>
+            <div class="timeline-meta"><span class="timeline-date i18n zh">2018.08 — 2020.07</span><span class="timeline-date i18n en">Aug 2018 – Jul 2020</span></div>
             <div class="timeline-body">
-              <h3>中学数学组长 · IBDP 数学教师</h3>
+              <h3><span class="i18n zh">中学数学组长 · IBDP 数学教师</span><span class="i18n en">Head of Mathematics in Secondary · IBDP Math Teacher</span></h3>
               <p class="timeline-org">Oversea Chinese Academy of Chiway, Suzhou</p>
-              <p>开展听课评课、主持数学教师会议，统筹中学数学活动；开发融合中国国家课程与 MYP / DP 框架的初高中一体化数学课程；负责 G10 Pre-DP 数学课程规划与教学，衔接 IGCSE、MYP 与国家高中课程。参与全校 60 余位教师、30 余个班级、近千名学生的课表编排与代课安排。</p>
+              <p>
+                <span class="i18n zh">开展听课评课、主持数学教师会议，统筹中学数学活动；开发融合中国国家课程与 MYP / DP 框架的初高中一体化数学课程；负责 G10 Pre-DP 数学课程规划与教学，衔接 IGCSE、MYP 与国家高中课程。参与全校 60 余位教师、30 余个班级、近千名学生的课表编排与代课安排。</span>
+                <span class="i18n en">Carried out lesson observations, chaired mathematics teachers' meetings, and led secondary mathematics events; developed an integrated middle-to-high-school mathematics curriculum aligning the Chinese National Curriculum with the MYP / DP framework; led Grade 10 Pre-DP mathematics planning and teaching, bridging IGCSE, MYP and national senior-high courses. Also built the whole-school timetable for 60+ teachers, 30+ classes and nearly 1,000 students, and coordinated cover arrangements.</span>
+              </p>
             </div>
           </article>
           <article class="timeline-item">
-            <div class="timeline-meta"><span class="timeline-date">2020.07 — 至今</span></div>
+            <div class="timeline-meta"><span class="timeline-date i18n zh">2020.07 — 至今</span><span class="timeline-date i18n en">Jul 2020 – Present</span></div>
             <div class="timeline-body">
-              <h3>IBDP 协调员 · 学术助理院长</h3>
+              <h3><span class="i18n zh">IBDP 协调员 · 学术助理院长</span><span class="i18n en">IBDP Coordinator · Assistant Dean of Academics</span></h3>
               <p class="timeline-org">世华学校 · China World Academy</p>
-              <p>全面负责高中学术工作；主导 2020 年 IB 授权认证与 2025 年五年评审；教授 IBDP 数学并指导 EE、CAS；为申请知名高校的学生提供升学与标准化考试指导。入职首年（2020.07–2021.06）兼任学术助理院长，负责新建学校学术部门的运营与管理。</p>
+              <p>
+                <span class="i18n zh">全面负责高中学术工作；主导 2020 年 IB 授权认证与 2025 年五年评审；教授 IBDP 数学并指导 EE、CAS；为申请知名高校的学生提供升学与标准化考试指导。入职首年（2020.07–2021.06）兼任学术助理院长，负责新建学校学术部门的运营与管理。</span>
+                <span class="i18n en">In overall charge of High School academics; led the 2020 IB authorisation and 2025 five-year review; taught IBDP Mathematics and supervised EE and CAS; guided students applying to top universities. During the first year (Jul 2020 – Jun 2021) also served as Assistant Dean of Academics, overseeing the operation and management of the newly founded school's academic department.</span>
+              </p>
             </div>
           </article>
           <article class="timeline-item">
-            <div class="timeline-meta"><span class="timeline-date">2022 — 至今</span></div>
+            <div class="timeline-meta"><span class="timeline-date i18n zh">2022 — 至今</span><span class="timeline-date i18n en">2022 – Present</span></div>
             <div class="timeline-body">
-              <h3>IB 数学内容创作者（兼职）</h3>
+              <h3><span class="i18n zh">IB 数学内容创作者（兼职）</span><span class="i18n en">IB Math Content Creator (part-time)</span></h3>
               <p class="timeline-org">IB Math Bank</p>
-              <p>为 IB Math Bank 编写 IBDP 风格数学试题与评分标准，参与国际课程题库建设。</p>
+              <p>
+                <span class="i18n zh">为 IB Math Bank 编写 IBDP 风格数学试题与评分标准，参与国际课程题库建设。</span>
+                <span class="i18n en">Author IBDP exam-style questions and mark schemes for IB Math Bank, contributing to international curriculum question-bank development.</span>
+              </p>
             </div>
           </article>
           <article class="timeline-item timeline-current">
-            <div class="timeline-meta"><span class="timeline-date">2026.08 — 至今</span></div>
+            <div class="timeline-meta"><span class="timeline-date i18n zh">2026.08 — 至今</span><span class="timeline-date i18n en">Aug 2026 – Present</span></div>
             <div class="timeline-body">
-              <h3>课程教学总监</h3>
+              <h3><span class="i18n zh">课程教学总监</span><span class="i18n en">Director of Curriculum and Instruction</span></h3>
               <p class="timeline-org">斐特思学校 · Fettes College Guangzhou</p>
-              <p>作为学校领导团队成员，统筹高中 IGCSE / A-Level / AP / BTEC 多课程体系，负责学科与考试局协调、教学质量保障、师资发展及升学指导项目。</p>
+              <p>
+                <span class="i18n zh">作为学校领导团队成员，统筹高中 IGCSE / A-Level / AP / BTEC 多课程体系，负责学科与考试局协调、教学质量保障、师资发展及升学指导项目。</span>
+                <span class="i18n en">As a member of the Senior Leadership Team, oversee the High School's multi-programme system (IGCSE / A-Level / AP / BTEC), including subject and exam-board coordination, teaching quality assurance, faculty development and university admissions guidance.</span>
+              </p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== 教育与资质 ===== -->
-    <section class="section" id="education">
+    <!-- ===== 面板 6：教育与资质 ===== -->
+    <section class="section tab-panel" id="panel-education" role="tabpanel">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">05 — 教育与资质</p>
-          <h2>持续学习，<br />是教育者的底色。</h2>
+          <p class="eyebrow i18n zh">05 — 教育与资质</p>
+          <p class="eyebrow i18n en">05 — Education &amp; Qualifications</p>
+          <h2><span class="i18n zh">持续学习，<br />是教育者的底色。</span><span class="i18n en">Lifelong learning,<br />an educator's foundation.</span></h2>
         </div>
         <div class="edu-grid">
           <article class="edu-card">
             <span class="edu-year">2019.06</span>
-            <h3>数学教育硕士</h3>
+            <h3><span class="i18n zh">数学教育硕士</span><span class="i18n en">Master of Mathematics Education</span></h3>
             <p class="edu-org">滑铁卢大学 · University of Waterloo</p>
-            <p>主修数学教育</p>
+            <p><span class="i18n zh">主修数学教育</span><span class="i18n en">Major: Mathematics Education</span></p>
           </article>
           <article class="edu-card">
             <span class="edu-year">2015.07</span>
-            <h3>工程学士</h3>
+            <h3><span class="i18n zh">工程学士</span><span class="i18n en">Bachelor of Engineering</span></h3>
             <p class="edu-org">新加坡国立大学 · National University of Singapore</p>
-            <p>主修工业与系统工程 · 中国本科生全额奖学金获得者</p>
+            <p><span class="i18n zh">主修工业与系统工程 · 中国本科生全额奖学金获得者</span><span class="i18n en">Major: Industrial and Systems Engineering · PRC Undergraduate Scholarship recipient (full tuition &amp; living expenses)</span></p>
           </article>
           <article class="edu-card">
             <span class="edu-year">2007 — 2010</span>
-            <h3>中学教育</h3>
+            <h3><span class="i18n zh">中学教育</span><span class="i18n en">Secondary Education</span></h3>
             <p class="edu-org">莱佛士书院 · Raffles Institution, Singapore</p>
-            <p>新加坡教育部校内奖学金（SM1）获得者</p>
+            <p><span class="i18n zh">新加坡教育部校内奖学金（SM1）获得者</span><span class="i18n en">Singapore MOE School-based SM1 Scholarship recipient</span></p>
           </article>
         </div>
         <div class="credentials">
-          <p class="eyebrow">专业资质与培训</p>
+          <p class="eyebrow i18n zh">专业资质与培训</p>
+          <p class="eyebrow i18n en">Professional Qualifications &amp; Training</p>
           <div class="cred-list">
-            <div class="cred-item"><span>IB 教育者网络（IBEN）工作坊培训官</span><span class="cred-note">2022.11 培训认证</span></div>
-            <div class="cred-item"><span>IBDP 协调员工作坊 Leading the Learning · Category 1</span><span class="cred-note">2020.11</span></div>
-            <div class="cred-item"><span>IBDP 数学（AA）Category 2 工作坊 · 中国台湾</span><span class="cred-note">2019.05</span></div>
-            <div class="cred-item"><span>Kuder 职业顾问教师高级认证（CAT）</span><span class="cred-note">2019.08</span></div>
-            <div class="cred-item"><span>IBDP 数学 HL Category 2 在线工作坊</span><span class="cred-note">2018.05</span></div>
-            <div class="cred-item"><span>IBO 数学（HL）考官培训 · 中国教育部高中数学教师资格证</span><span class="cred-note">专业资格</span></div>
+            <div class="cred-item"><span class="i18n zh">IB 教育者网络（IBEN）工作坊培训官</span><span class="i18n en">IB Workshop Leader — IB Educator Network (IBEN)</span><span class="cred-note i18n zh">2022.11 培训认证</span><span class="cred-note i18n en">Nov 2022</span></div>
+            <div class="cred-item"><span class="i18n zh">IBDP 协调员工作坊 Leading the Learning · Category 1</span><span class="i18n en">IBDP Coordinator Workshop — Leading the Learning, Category 1</span><span class="cred-note i18n zh">2020.11</span><span class="cred-note i18n en">Nov 2020</span></div>
+            <div class="cred-item"><span class="i18n zh">IBDP 数学（AA）Category 2 工作坊 · 中国台湾</span><span class="i18n en">IBDP Math (AA) Category 2 Workshop · Taiwan, China</span><span class="cred-note i18n zh">2019.05</span><span class="cred-note i18n en">May 2019</span></div>
+            <div class="cred-item"><span class="i18n zh">Kuder 职业顾问教师高级认证（CAT）</span><span class="i18n en">Kuder Career Advisor Teacher Advanced (CAT)</span><span class="cred-note i18n zh">2019.08</span><span class="cred-note i18n en">Aug 2019</span></div>
+            <div class="cred-item"><span class="i18n zh">IBDP 数学 HL Category 2 在线工作坊</span><span class="i18n en">IBDP Math HL Category 2 Online Workshop</span><span class="cred-note i18n zh">2018.05</span><span class="cred-note i18n en">May 2018</span></div>
+            <div class="cred-item"><span class="i18n zh">IBO 数学（HL）考官培训 · 中国教育部高中数学教师资格证</span><span class="i18n en">IBO Mathematics (HL) Examiner Training · Chinese MOE High School Mathematics Teaching Licence</span><span class="cred-note i18n zh">专业资格</span><span class="cred-note i18n en">Professional qualification</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== 影像记录 ===== -->
-    <section class="section section-tint" id="gallery">
+    <!-- ===== 面板 7：影像 ===== -->
+    <section class="section section-tint tab-panel" id="panel-gallery" role="tabpanel">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">06 — 影像记录</p>
-          <h2>工作现场，<br />也是学习现场。</h2>
-          <p class="section-sub">IB 官方培训与专业活动中的几个片段。</p>
+          <p class="eyebrow i18n zh">06 — 影像记录</p>
+          <p class="eyebrow i18n en">06 — Gallery</p>
+          <h2><span class="i18n zh">工作现场，<br />也是学习现场。</span><span class="i18n en">The workplace,<br />also a place of learning.</span></h2>
+          <p class="section-sub">
+            <span class="i18n zh">IB 官方培训与专业活动中的几个片段。</span>
+            <span class="i18n en">Moments from official IB training and professional events.</span>
+          </p>
         </div>
         <div class="gallery-grid">
           <figure class="gallery-item gallery-wide">
             <img src="assets/ib-event-2026.jpg" alt="IB 亚太地区学校活动合影" loading="lazy" />
-            <figcaption>IB 亚太地区学校活动合影</figcaption>
+            <figcaption><span class="i18n zh">IB 亚太地区学校活动合影</span><span class="i18n en">IB Asia-Pacific schools event group photo</span></figcaption>
           </figure>
           <figure class="gallery-item">
             <img src="assets/ib-workshop-teaching-2.jpg" alt="工作坊授课现场" loading="lazy" />
-            <figcaption>工作坊授课现场</figcaption>
+            <figcaption><span class="i18n zh">工作坊授课现场</span><span class="i18n en">Workshop teaching session</span></figcaption>
           </figure>
           <figure class="gallery-item">
             <img src="assets/ib-workshop-group.jpg" alt="IB 工作坊参与者合影" loading="lazy" />
-            <figcaption>IB 工作坊参与者合影</figcaption>
+            <figcaption><span class="i18n zh">IB 工作坊参与者合影</span><span class="i18n en">IB workshop participants group photo</span></figcaption>
           </figure>
           <figure class="gallery-item">
             <img src="assets/ib-workshop-teaching-1.jpg" alt="数学工作坊教学研讨" loading="lazy" />
-            <figcaption>数学工作坊教学研讨</figcaption>
+            <figcaption><span class="i18n zh">数学工作坊教学研讨</span><span class="i18n en">Mathematics workshop discussion</span></figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- ===== 联系 ===== -->
-    <section class="section contact" id="contact">
+    <!-- ===== 面板 8：联系 ===== -->
+    <section class="section contact tab-panel" id="panel-contact" role="tabpanel">
       <div class="container contact-inner">
-        <p class="eyebrow">07 — 联系我</p>
-        <h2>聊聊课程，聊聊教育。</h2>
+        <p class="eyebrow i18n zh">07 — 联系我</p>
+        <p class="eyebrow i18n en">07 — Contact</p>
+        <h2><span class="i18n zh">聊聊课程，聊聊教育。</span><span class="i18n en">Let's talk curriculum and education.</span></h2>
         <p class="contact-lead">
-          无论你是想探讨 IB 课程实施与认证、数学教学，还是希望交流教育资源，都欢迎联系我。
+          <span class="i18n zh">无论你是想探讨 IB 课程实施与认证、数学教学，还是希望交流教育资源，都欢迎联系我。</span>
+          <span class="i18n en">Whether you would like to discuss IB implementation and authorisation, mathematics teaching, or exchange educational resources, I would be glad to hear from you.</span>
         </p>
         <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:huyetao2015@hotmail.com">发送邮件</a>
-          <a class="btn btn-ghost" href="assets/Jerry-Hu-Resume-2026.pdf" target="_blank" rel="noopener">下载简历 <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-primary" href="mailto:huyetao2015@hotmail.com"><span class="i18n zh">发送邮件</span><span class="i18n en">Send email</span></a>
+          <a class="btn btn-ghost" href="assets/Jerry-Hu-Resume-2026.pdf" target="_blank" rel="noopener"><span class="i18n zh">下载简历</span><span class="i18n en">Download CV</span> <span aria-hidden="true">↗</span></a>
         </div>
         <p class="contact-note">
-          邮箱：<a href="mailto:huyetao2015@hotmail.com">huyetao2015@hotmail.com</a>
+          <span class="i18n zh">邮箱</span><span class="i18n en">Email</span>：<a href="mailto:huyetao2015@hotmail.com">huyetao2015@hotmail.com</a>
           <span class="sep">·</span>
-          电话：<a href="tel:+8618962246119">+86 189 6224 6119</a>
+          <span class="i18n zh">电话</span><span class="i18n en">Phone</span>：<a href="tel:+8618962246119">+86 189 6224 6119</a>
         </p>
       </div>
     </section>
