@@ -363,9 +363,10 @@ body.lang-en .i18n.zh { display: none !important; }
 .cred-note { font-size: 12px; color: var(--muted); flex-shrink: 0; }
 .cred-item > a { color: var(--accent-deep); border-bottom: 1px dashed var(--accent); }
 .cred-item > a:hover { color: var(--accent); }
-.cred-main { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.cred-pdf { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; line-height: 1; color: var(--accent-deep); border: 1px solid var(--accent); border-radius: 999px; padding: 4px 9px; white-space: nowrap; text-decoration: none; letter-spacing: .3px; }
-.cred-pdf:hover { background: var(--accent); color: #fff; }
+.cred-main { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.cred-pdf { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; line-height: 1; color: #fff; background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 7px 11px; white-space: nowrap; text-decoration: none; box-shadow: 0 3px 8px -3px rgba(29,92,143,.5); transition: background .15s ease, transform .15s ease; }
+.cred-pdf::before { content: ""; width: 13px; height: 15px; flex: none; background: #fff; border-radius: 2px; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 16'%3E%3Cpath d='M3 0h5l4 4v11a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 0v4h4' fill='none' stroke='%23000' stroke-width='1.4'/%3E%3Cpath d='M4.5 9h5M4.5 11.5h5' stroke='%23000' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat center / contain; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 16'%3E%3Cpath d='M3 0h5l4 4v11a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zm5 0v4h4' fill='none' stroke='%23000' stroke-width='1.4'/%3E%3Cpath d='M4.5 9h5M4.5 11.5h5' stroke='%23000' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat center / contain; }
+.cred-pdf:hover { background: var(--accent-deep); transform: translateY(-1px); }
 
 /* ===== 影像记录：首页底部左右轮播 ===== */
 .gallery-section { background: var(--surface-tint); border-top: 1px solid var(--line); }
