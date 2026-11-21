@@ -233,6 +233,8 @@ body.lang-en .i18n.zh { display: none !important; }
   .stat-label small { display: none; }
   .stat-num { font-size: 32px; }
   .role-grid, .ib-grid, .edu-grid, .gallery-grid, .ib-feature { grid-template-columns: 1fr; gap: 18px; }
+  .course-grid { grid-template-columns: repeat(2, 1fr); }
+  .exam-chips { grid-template-columns: 1fr; }
   .ib-feature { padding: 24px; }
   .ib-feature-media img { height: 220px; }
   .timeline::before { left: 7px; }
@@ -288,6 +290,22 @@ body.lang-en .i18n.zh { display: none !important; }
 .ib-note { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 24px; padding: 22px 28px; background: var(--accent-soft); border-radius: var(--radius-sm); }
 .ib-note-label { flex-shrink: 0; font-size: 12px; font-weight: 700; color: var(--accent-deep); background: #fff; border-radius: 100px; padding: 6px 14px; }
 .ib-note p { flex: 1; min-width: 240px; margin: 0; font-size: 14px; color: var(--ink-soft); }
+
+/* ===== 授课课程与入学考试辅导 ===== */
+.teach-block { margin-top: 40px; }
+.teach-heading h3, .exam-intro h3 { font-family: var(--font-serif); font-size: 24px; margin: 0 0 10px; }
+.teach-sub, .exam-intro > p:not(.eyebrow) { color: var(--ink-soft); font-size: 14px; margin: 0 0 22px; }
+.course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.course-card { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: var(--radius-sm); padding: 22px 20px; }
+.course-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .5px; color: var(--accent); background: var(--accent-soft); border-radius: 100px; padding: 4px 11px; margin-bottom: 14px; }
+.course-card h4 { font-family: var(--font-serif); font-size: 16px; line-height: 1.5; margin: 0 0 8px; }
+.course-card p { font-size: 12px; color: var(--muted); margin: 0; }
+.exam-block { margin-top: 24px; padding: 28px 30px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.exam-intro h3 { font-size: 22px; }
+.exam-chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+.exam-chip { background: var(--accent-soft); border-radius: var(--radius-sm); padding: 18px 20px; display: flex; flex-direction: column; gap: 2px; }
+.exam-chip strong { font-family: var(--font-serif); font-size: 22px; color: var(--accent-deep); margin-bottom: 4px; }
+.exam-chip span { font-size: 12px; color: var(--ink-soft); line-height: 1.55; }
 
 /* ===== 职业履历时间线 ===== */
 .timeline { position: relative; padding-left: 0; }
