@@ -73,7 +73,7 @@ window.addEventListener('scroll', () => {
 
 // ===== 入场动画 =====
 const revealTargets = document.querySelectorAll(
-  '.section-heading, .about-body, .hero-copy, .hero-portrait, .stats-bar, .contact-inner, .profile-photo, .ib-card, .ib-feature, .ib-note, .timeline-item, .edu-card, .cred-item'
+  '.section-heading, .about-body, .hero-copy, .hero-portrait, .stats-bar, .contact-inner, .profile-photo, .ib-card, .ib-feature, .ib-note, .timeline-item, .edu-card, .cred-item, .quote-card, .reference-note'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
 

@@ -417,6 +417,20 @@ body.lang-en .i18n.zh { display: none !important; }
   .gifted-program { padding: 17px; }
 }
 
+/* ===== 同事评价 / Testimonials ===== */
+.quote-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.quote-card { position: relative; margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 40px 30px 26px; overflow: hidden; }
+.quote-card::before { content: "\201C"; position: absolute; top: -14px; right: 20px; font-family: var(--font-serif); font-size: 120px; line-height: 1; color: var(--accent-soft); z-index: 0; }
+.quote-card blockquote { position: relative; z-index: 1; margin: 0 0 20px; font-size: 15px; line-height: 1.75; color: var(--ink-soft); font-style: italic; }
+.quote-card figcaption { position: relative; z-index: 1; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; font-weight: 700; color: var(--accent-deep); }
+.quote-card .quote-mark { font-family: var(--font-serif); font-size: 22px; color: var(--gold); margin-right: 6px; }
+.reference-note { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 26px; padding: 22px 28px; background: var(--accent-deep); border-radius: var(--radius); color: #fff; }
+.reference-note-label { flex-shrink: 0; font-size: 12px; font-weight: 700; color: var(--accent-deep); background: #fff; border-radius: 100px; padding: 6px 14px; }
+.reference-note p { flex: 1; min-width: 220px; margin: 0; font-size: 14px; color: rgba(255,255,255,.9); }
+@media (max-width: 900px) {
+  .quote-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== 入场动画 ===== */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
